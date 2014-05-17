@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.clarknikdelpowell.realtime_camera"
-    version="1.0.0">
+    version="0.2.0">
 	
 	<name>Realtime Camera</name>
 	<description>Loosely based on CanvasCamera by daraosn</description>
@@ -13,11 +13,14 @@
 	<js-module src="www/realtime-camera.js" name="RealtimeCamera"/>
 
 	<platform name="ios">
-		<!--<config-file target="config.xml" parent="/*">
+		<config-file target="config.xml" parent="/*">
                 	<feature name="RealtimeCamera">
 				<param name="ios-package" value="CDVRealtimeCamera"/>
            		</feature>
-            	</config-file>-->
+            	</config-file>
+		
+		<framework src="CoreVideo.framework" />
+		<framework src="AVFoundation.framework" />
 
 		<source-file src="src/ios/CDVRealtimeCamera.m"/>
 		<header-file src="src/ios/CDVRealtimeCamera.h"/>
