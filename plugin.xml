@@ -13,11 +13,11 @@
 	<js-module src="www/realtime-camera.js" name="RealtimeCamera"/>
 
 	<platform name="ios">
-		<config-file target="config.xml" parent="/*">
+		<!--<config-file target="config.xml" parent="/*">
                 	<feature name="RealtimeCamera">
 				<param name="ios-package" value="CDVRealtimeCamera"/>
            		</feature>
-            	</config-file>
+            	</config-file>-->
 
 		<source-file src="src/ios/CDVRealtimeCamera.m"/>
 		<header-file src="src/ios/CDVRealtimeCamera.h"/>
