@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.clarknikdelpowell.realtime_camera"
+    version="1.0.0">
+	
+	<name>Realtime Camera</name>
+	<description>Loosely based on CanvasCamera by daraosn</description>
+	<keywords>camera,canvas,realtime,webcam</keywords>
+	<license>MIT License</license>
+	<repo>https://github.com/ogapo/realtime_camera.git</repo>
+
+	<platform name="ios">
+		<js-module src="realtime-camera.js" name="RealtimeCamera"/>
+
+		<source-file src="src/ios/CDVRealtimeCamera.m"/>
+		<header-file src="src/ios/CDVRealtimeCamera.h"/>
+	</platform>
+</plugin>
