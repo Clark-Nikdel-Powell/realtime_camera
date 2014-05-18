@@ -10,14 +10,17 @@
 	<license>MIT License</license>
 	<repo>https://github.com/ogapo/realtime_camera.git</repo>
 
-	<js-module src="www/realtime-camera.js" name="RealtimeCamera"/>
-
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
                 	<feature name="RealtimeCamera">
-				<param name="ios-package" value="CDVRealtimeCamera"/>
+				<param name="ios-package" value="RealtimeCamera"/>
+				<param name="onload" value="true" />
            		</feature>
             	</config-file>
+
+		<js-module src="www/realtime-camera.js" name="RealtimeCamera">
+			<clobbers target="RealtimeCamera"/>
+		</js-module>
 		
 		<framework src="CoreVideo.framework" />
 		<framework src="AVFoundation.framework" />
