@@ -41,21 +41,29 @@ THE SOFTWARE.
 	}
 
 	// set the capture session resolution
+	NSString* sessionPreset = nil;
     id resolutionParam = [command.arguments objectAtIndex:0];
 	if ([resolutionParam isEqualToString:@"352x288"])
-		self.session.sessionPreset = AVCaptureSessionPreset352x288;
+		sessionPreset = AVCaptureSessionPreset352x288;
 	else if ([resolutionParam isEqualToString:@"640x480"])
-		self.session.sessionPreset = AVCaptureSessionPreset640x480;
+		sessionPreset = AVCaptureSessionPreset640x480;
 	else if ([resolutionParam isEqualToString:@"1280x720"])
-		self.session.sessionPreset = AVCaptureSessionPreset1280x720;
+		sessionPreset = AVCaptureSessionPreset1280x720;
 	else if ([resolutionParam isEqualToString:@"1920x1080"])
-		self.session.sessionPreset = AVCaptureSessionPreset1920x1080;
+		sessionPreset = AVCaptureSessionPreset1920x1080;
 	else
 	{
 		CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Unsupported resolution setting."];
 		[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 		return;
 	}
+
+	// change the preset in a background thread
+	[self.commandDelegate runInBackground:^{
+		if (self.session != nil) {
+			self.session.sessionPreset = sessionPreset;
+		}
+	}];
 
 	// send the response
 	CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
