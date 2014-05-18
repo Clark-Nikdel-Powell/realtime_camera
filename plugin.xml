@@ -13,7 +13,7 @@
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
                 	<feature name="RealtimeCamera">
-				<param name="ios-package" value="RealtimeCamera"/>
+				<param name="ios-package" value="CDVRealtimeCamera"/>
 				<param name="onload" value="true" />
            		</feature>
             	</config-file>
