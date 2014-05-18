@@ -29,9 +29,11 @@ THE SOFTWARE.
 @interface CDVRealtimeCamera : CDVPlugin
 
 @property (nonatomic, strong) AVCaptureSession *session;
+@property (nonatomic, strong) NSMutableData *frame_buffer;
 @property (nonatomic, strong) NSString *frame_callback;
 
 - (void)startCapture:(CDVInvokedUrlCommand*)command;
 - (void)endCapture:(CDVInvokedUrlCommand*)command;
+- (void)changeResolution:(CDVInvokedUrlCommand*)command;
 
 @end

@@ -24,6 +24,7 @@
 		
 		<framework src="CoreVideo.framework" />
 		<framework src="AVFoundation.framework" />
+		<framework src="JavaScriptCore.framework" />
 
 		<source-file src="src/ios/CDVRealtimeCamera.m"/>
 		<header-file src="src/ios/CDVRealtimeCamera.h"/>
