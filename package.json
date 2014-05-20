@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "0.2.0",
     "name": "com.clarknikdelpowell.realtime_camera",
     "cordova_name": "Realtime Camera",
     "description": "Loosely based on CanvasCamera by daraosn",
