@@ -8,7 +8,7 @@
 	<description>Loosely based on CanvasCamera by daraosn</description>
 	<keywords>camera,canvas,realtime,webcam</keywords>
 	<license>MIT License</license>
-	<repo>https://github.com/ogapo/realtime_camera.git</repo>
+	<repo>https://github.com/Clark-Nikdel-Powell/realtime_camera.git</repo>
 
 	<platform name="ios">
 		<config-file target="config.xml" parent="/*">
