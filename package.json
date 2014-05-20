@@ -4,7 +4,7 @@
     "cordova_name": "Realtime Camera",
     "description": "Loosely based on CanvasCamera by daraosn",
     "license": "MIT License",
-    "repo": "https://github.com/ogapo/realtime_camera.git",
+    "repo": "https://github.com/Clark-Nikdel-Powell/realtime_camera.git",
     "keywords": [
         "camera",
         "canvas",
